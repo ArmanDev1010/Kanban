@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 flex items-center min-h-screen overflow-y-hidden">
+    <div class="flex justify-start items-baseline items-center gap-10 px-5">
+        <div class="block bg-zinc-100 px-5 pt-7 rounded w-72">
+            <h1 class="text-blue-900 font-semibold">To do</h1>
+            <div class="drop">
+
+                <!-- <div class="todo" draggable="true">
+                    <div class="todo_img"></div>
+                    <div class="todo_right">
+                        <p class="priorety">priorety</p>
+                        <p class="title">Nike</p>
+                        <div class="categorys">
+                            <span>d</span>
+                            <span>enjvrwb</span>
+                        </div>
+                    </div>
+                    <div class="todo_date">18 Dec.2017</div>        
+                </div> -->
+
+            </div>
+            <div class="flex justify-center text-gray-500 text-sm py-7">
+                <button class="add_btn" data-btn="0">+ Add new card</button>
+            </div>
+        </div>
+        <div class="block bg-zinc-100 px-5 pt-7 rounded w-72">
+            <h1 class="text-blue-900 font-semibold">In Progress</h1>
+            <div class="drop"></div>
+            <div class="flex justify-center text-gray-500 text-sm py-7">
+                <button class="add_btn" data-btn="1">+ Add new card</button>
+            </div>
+        </div>
+        <div class="block bg-zinc-100 px-5 pt-7 rounded w-72">
+            <h1 class="text-blue-900 font-semibold">Done</h1>
+            <div class="drop"></div>
+            <div class="flex justify-center text-gray-500 text-sm py-7">
+                <button class="add_btn" data-btn="2">+ Add new card</button>
+            </div>
+        </div>
+    </div>
+    <div class="relative p-5" id="modal">
+        <form class="flex flex-col gap-7">
+            <div class="flex gap-2">
+                <span
+            class="prio bg-rose-400 text-white font-semibold text-sm p-1 cursor-pointer rounded-md"
+            data-prio="high"
+            >High</span>
+                <span
+            class="prio bg-sky-400 text-white font-semibold text-sm p-1 cursor-pointer rounded-md"
+            data-prio="medium"
+            >Medium</span>
+                <span
+            class="prio bg-teal-400 text-white font-semibold text-sm p-1 cursor-pointer rounded-md"
+            data-prio="low"
+            >Low</span>
+            </div>
+            <div class="">
+                <p class="text-[17px] font-medium">Enter a title for this card...</p>
+                <input
+            type="text"
+            placeholder="Complete ICodeThis challenge"
+            id="title"
+            class="outline-none mt-1 w-full"
+          />
+            </div>
+            <div class="">
+                <p class="text-[17px] font-medium">
+                    Enter your categories(use a comma to separate)
+                </p>
+                <input
+            type="text"
+            placeholder="Development, Work"
+            id="categorys"
+            class="outline-none mt-1 w-full"
+          />
+            </div>
+            <div class="">
+                <p class="text-[17px] font-medium">Add your image (paste url)</p>
+                <input
+            type="text"
+            placeholder="https://yourImage.com"
+            id="image"
+            class="outline-none mt-1 w-full"
+          />
+            </div>
+            <button
+          type="submit"
+          class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-sm w-[fit-content] py-2 px-4 rounded"
+          id="submitBtn"
+        >
+          Add card
+        </button>
+        </form>
+        <button class="absolute top-2 right-3" id="close_btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-x"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#000000"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div id="overlay"></div>
+</body>
+
+</html>
