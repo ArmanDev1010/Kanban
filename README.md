@@ -12,11 +12,11 @@ https://user-images.githubusercontent.com/90067026/226428413-c8be572d-9e11-42b1-
 
 ## Features
 
-* Create task cards
-* drag and drop cards
-* Set priority for task card
-* Set the title, description, and the image of the card
-* Set categorys of the card
+- Create task cards
+- drag and drop cards
+- Set priority for task card
+- Set the title, description, and image of the card
+- Set categories for the card
 
 ## Technologies Used
 
